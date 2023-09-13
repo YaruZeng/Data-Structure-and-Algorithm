@@ -9,7 +9,8 @@ public:
         int k = m + n - 1; // index in nums1 to get correct number
         
         while (j >= 0) { // traverse all nums in nums2, if nums1 have more numbers, remain them as the correct order
-            if (i >= 0 && nums1[i] > nums2[j]) { // if m < n, add smaller numbers of nums2 to the start of nums1, e.g.nums1 = [2, 3], nums2 = [1, 2, 4]
+            if (i >= 0 && nums1[i] > nums2[j]) { // avoid infinite loop
+            // if m < n, add smaller numbers of nums2 to the start of nums1, e.g.nums1 = [2, 3], nums2 = [1, 2, 4]
                 nums1[k--] = nums1[i--];
             } else {
                 nums1[k--] = nums2[j--];
