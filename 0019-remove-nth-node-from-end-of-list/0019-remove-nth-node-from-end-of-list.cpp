@@ -19,6 +19,7 @@ public:
         if (fast == NULL) { // n = size, remove head
             ListNode* temp = head->next;
             delete head;
+            head = nullptr;
             return temp; 
         }
         
@@ -30,6 +31,7 @@ public:
         ListNode* deleteNode = slow->next; // delete target node
         slow->next = slow->next->next;
         delete deleteNode;
+        deleteNode = nullptr;
         
         return head;
     }
