@@ -60,7 +60,7 @@ public:
         LinkNode* temp = cur->next;
         cur->next = cur->next->next;
         delete temp;
-        temp = nullptr;
+        temp = nullptr; // make sure temp is not assigned a random value
         _size--;
     }
     
