@@ -4,8 +4,8 @@ public:
         int maxSum = INT_MIN;
         int currentSum = 0;
         
-        for (int i = 0; i < nums.size(); i++) {
-            currentSum += nums[i];
+        for (int num : nums) {
+            currentSum += num;
             
             if (currentSum > maxSum) {
                 maxSum = currentSum;
