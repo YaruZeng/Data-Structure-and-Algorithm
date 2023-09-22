@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-// Solution1: DFS, recursion
+// Solution1: recursion
 
 // class Solution {
 // public:
@@ -27,7 +27,7 @@
 //     }
 // };
 
-// Solution2: BFS
+// Solution2: iteration
 
 class Solution {
 public:
