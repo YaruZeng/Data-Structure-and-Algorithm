@@ -10,7 +10,7 @@
  * };
  */
 
-// Solution 1: DFS, recursion
+// Solution 1: recursion
 // class Solution {
 // public:
 //     void travesal(vector<int>& vec, TreeNode* cur) {
@@ -29,7 +29,7 @@
 // };
 
 
-// Solution2: BFS
+// Solution2: iteration
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
