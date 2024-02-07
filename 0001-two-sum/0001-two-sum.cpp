@@ -1,16 +1,14 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> umap; // to store traversed nums and their indices
-        
+        unordered_map<int,int> umap;
         for (int i = 0; i < nums.size(); i++) {
-            int compliment = target - nums[i];
-            if (umap.count(compliment)) { // if find the compliment in the traversed nums
-                return {umap[compliment], i}; // return the two indices
-            } else {
-                umap[nums[i]] = i; // if not, store the traversed num:i pair into the map
+            int complement = target - nums[i];
+            if (umap.find(complement) != umap.end()) {
+                return {umap[complement], i};
             }
+            umap.insert(pair<int,int>(nums[i], i));
         }
-        return {}; // no valid result
+        return {};
     }
 };
