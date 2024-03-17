@@ -9,6 +9,5 @@ class Solution:
                 count[ord(c) - ord('a')] += 1
                 
             hashmap[tuple(count)].append(s)
-            
-        
+                
         return hashmap.values()
